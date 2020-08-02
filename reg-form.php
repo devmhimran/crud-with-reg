@@ -65,11 +65,9 @@
 			$data = photo_upload($_FILES['photo1'],'photo/profile/');
 			$photo_data= $data['file_name'];
 
-			$data1 = photo_upload($_FILES['photo2'],'photo/cover/');
-			$photo_data1= $data1['file_name'];
 			if ( $data['status'] == 'yes' ) {
 
-				 $sql = " INSERT INTO users (name,phone,email,username,password,photo1,photo2) values ('$name','$phone','$email','$username','$password_hash','$photo_data','$photo_data1')";
+				 $sql = " INSERT INTO users (name,phone,email,username,password,photo1) values ('$name','$phone','$email','$username','$password_hash','$photo_data')";
 				 $conn -> query($sql);
 				set_msg('Successfully Sign Up');
 
@@ -157,10 +155,6 @@
 					<div class="form-group">
 						<label>Profile Photo</label>
 						<input class="form-control" type="file" name="photo1" >
-					</div>
-					<div class="form-group">
-						<label>Profile Photo 2</label>
-						<input class="form-control" type="file" name="photo2" >
 					</div>
 					<div class="form-group">
 						<input class="btn btn-outline-info" type="submit" name="submit"  value="Sign In">

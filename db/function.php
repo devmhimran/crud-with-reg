@@ -57,7 +57,7 @@ function photo_upload($files, $location , $format=['jpg','png','jpeg']){
       
     }else{
       return true;
-      ;
+      
     }
 
  } 

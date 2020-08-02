@@ -8,3 +8,14 @@ body{
 	background-color: #E7E7E7;
 	
 }
+.form{
+	width: 60% !important;
+}
+.recent{
+	width: 100px;
+	height: 100px;
+	border-radius: 25px;
+}
+.recent-body{
+
+}
